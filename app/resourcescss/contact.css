@@ -1,0 +1,128 @@
+ *
+    {
+        margin: 0;
+        padding: 0;
+    }
+
+    body
+    {
+        font-family: sans-serif;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .slider
+    {
+        position: relative;
+        width: 100%;   /*horizontal height*/
+        height: 100vh; /*vertical height*/
+        background-color: #111;
+        color: #fff;
+        display: flex;
+        align-items: center; /*vertical centering*/
+        justify-content: center; /*horizontal centering*/
+        text-align: center; /*inside the tag centering*/
+        overflow: hidden; /*to hide scroll*/
+        z-index: 1; 
+    }
+    .slider .footer {
+       display: flex;
+       width: 100%;   /*horizontal height*/
+       height: 100vh; /*vertical height*/
+       align-items: end; /*vertical centering*/
+       margin-bottom: 100px;
+    }
+    .slider-container h1
+    {
+        margin-bottom: 20px;
+        font-size: 65px;
+        letter-spacing: 2px;
+        text-shadow: 0 0 5px #111;
+    }
+    .slider-container p
+    {
+        letter-spacing: 2px;
+        text-shadow: 0 0 5px #111;
+    }
+   .cta 
+    {
+         padding: 10px 65px; /*top/bottom left/right*/
+         border: 1px solid #fff;
+         display: inline-block;
+         margin-top: 20px;
+         border-radius: 50px;
+         cursor: pointer;
+         font-size: 18px;
+         font-weight: bold; 
+         z-index: 1;
+            
+    }
+    .cta a 
+    {
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;    
+        color: #fff;
+        z-index: 1;
+    }
+
+    .cta:hover 
+    {
+        background-color: rgb(233,0,0);
+    }
+    .slider .video 
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        overflow: hidden;     
+    }
+    .youtube-container {
+    overflow: hidden;
+    width: 100%;
+    /* Keep it the right aspect-ratio */
+    aspect-ratio: 16/9;
+    /* No clicking/hover effects */
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+   
+} 
+
+.youtube-container iframe {
+    /* Extend it beyond the viewport... */
+    width: 300%;
+    height: 100%;
+    /* ...and bring it back again */
+    margin-left: -100%;
+}
+
+/* Mobile Responsive Styles Tricks */
+@media (max-width: 640px) {
+     .youtube-container {
+        overflow: hidden;
+        margin-top: -100px;
+   } 
+
+    .slider .footer {
+       display: flex;
+       position: absolute;
+       width: 100%;   /*horizontal height*/
+       height: 80vh; /*vertical height*/
+       align-items: end; /*vertical centering*/
+       margin-bottom: 180px;
+          }
+     .slider-container{
+        margin-bottom: 300px;
+     }
+    .slider-container h1{
+        font-size: 30px;
+    }
+}
